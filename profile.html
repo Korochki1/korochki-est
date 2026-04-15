@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои заявки - Корочки.есть</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 Корочки.есть</div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="request.html">Новая заявка</a>
+                <a href="profile.html" class="active">Мои заявки</a>
+                <span id="userName"></span>
+                <a href="#" id="logoutBtn">Выйти</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1>Мои заявки на обучение</h1>
+        
+        <div class="profile-section">
+            <div class="user-info-card">
+                <h3>👤 Информация о пользователе</h3>
+                <p><strong>ФИО:</strong> <span id="profileFullName"></span></p>
+                <p><strong>Телефон:</strong> <span id="profilePhone"></span></p>
+                <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            </div>
+        </div>
+        
+        <div class="profile-section">
+            <h2>📋 История заявок</h2>
+            <div id="applicationsList" class="applications-list"></div>
+        </div>
+        
+        <div class="profile-section">
+            <h2>⭐ Мои отзывы</h2>
+            <div id="reviewsList" class="reviews-list"></div>
+        </div>
+        
+        <!-- Модальное окно добавления отзыва -->
+        <div id="reviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <input type="hidden" id="reviewAppId">
+                    <div class="form-group">
+                        <label>Оценка (1-5)</label>
+                        <select id="reviewRating" required>
+                            <option value="5">5 - Отлично</option>
+                            <option value="4">4 - Хорошо</option>
+                            <option value="3">3 - Средне</option>
+                            <option value="2">2 - Плохо</option>
+                            <option value="1">1 - Ужасно</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ваш отзыв</label>
+                        <textarea id="reviewComment" rows="4" required placeholder="Поделитесь впечатлениями о курсе..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

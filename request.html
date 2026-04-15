@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новая заявка - Корочки.есть</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 Корочки.есть</div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="request.html" class="active">Новая заявка</a>
+                <a href="profile.html">Мои заявки</a>
+                <span id="userName"></span>
+                <a href="#" id="logoutBtn">Выйти</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="form-container">
+            <h1>📝 Заявка на обучение</h1>
+            <p>Заполните форму для подачи заявки на курс дополнительного профессионального образования</p>
+            
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label>Наименование курса *</label>
+                    <input type="text" id="courseName" placeholder="Например: Python для начинающих" required>
+                    <small>Введите название курса, который вы хотите пройти</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Желаемая дата начала обучения *</label>
+                    <input type="date" id="startDate" required>
+                    <small>Выберите дату не ранее сегодняшнего дня</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Способ оплаты *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="paymentMethod" value="cash" checked> 💵 Наличными (при посещении офиса)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="paymentMethod" value="transfer"> 📱 Переводом по номеру телефона
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+            </form>
+        </div>
+        
+        <div class="info-box">
+            <h3>📌 Что будет после подачи заявки?</h3>
+            <p>После отправки заявки она поступает на рассмотрение администратору. Статус заявки можно отслеживать в разделе "Мои заявки".</p>
+            <p>Администратор свяжется с вами для подтверждения записи на курс.</p>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/request.js"></script>
+</body>
+</html>
+<section class="hero-small">
+    <h1>Записаться на курсы онлайн</h1>
+    <p>Подайте заявку на обучение по программам дополнительного профессионального образования</p>
+</section>
+
+<div class="seo-content">
+    <h2>Профессиональная переподготовка и повышение квалификации</h2>
+    <p>Образовательный портал <strong>«Корочки.есть»</strong> предлагает широкий выбор программ дополнительного образования. Заполните заявку на обучение, и наши специалисты помогут подобрать оптимальный курс для вашего профессионального развития.</p>
+    
+    <h3>Преимущества обучения на наших курсах</h3>
+    <ul>
+        <li><strong>Дистанционное обучение с сертификатом</strong> — учитесь из любой точки России</li>
+        <li><strong>Курсы для начинающих с нуля</strong> — программы любого уровня сложности</li>
+        <li><strong>Удостоверение о повышении квалификации</strong> государственного образца</li>
+        <li><strong>Профессиональная переподготовка</strong> по востребованным специальностям</li>
+    </ul>
+    
+    <h3>Как подать заявку на обучение?</h3>
+    <p>Для того чтобы записаться на курсы онлайн, достаточно заполнить форму ниже. Укажите наименование курса, желаемую дату начала и способ оплаты. После подачи заявки на обучение с вами свяжется наш менеджер для подтверждения.</p>
+    
+    <p>Оставьте заявку на курс ДПО прямо сейчас и начните свой путь к новой профессии! Все наши программы сопровождаются выдачей официальных документов об образовании.</p>
+</div>
+<!-- Блок полезных ресурсов на request.html -->
+<div class="useful-resources">
+    <h3>Полезные ресурсы для обучения</h3>
+    <ul>
+        <li><a href="https://minobrnauki.gov.ru/" rel="nofollow noopener noreferrer" target="_blank">Министерство науки и высшего образования РФ</a></li>
+        <li><a href="https://edu.gov.ru/" rel="nofollow noopener noreferrer" target="_blank">Минпросвещения России - Образование</a></li>
+        <li><a href="https://www.ranepa.ru/" rel="nofollow noopener noreferrer" target="_blank">РАНХиГС - Высшее образование</a></li>
+        <li><a href="https://www.hse.ru/" rel="nofollow noopener noreferrer" target="_blank">НИУ ВШЭ - Дополнительное образование</a></li>
+    </ul>
+</div>

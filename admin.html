@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора - Корочки.есть</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 Корочки.есть | Админ-панель</div>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="admin.html" class="active">Управление заявками</a>
+                <span id="userName"></span>
+                <a href="#" id="logoutBtn">Выйти</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <h1>👨‍💼 Панель администратора</h1>
+        
+        <div class="admin-stats" id="adminStats">
+            <!-- Статистика будет загружена через JS -->
+        </div>
+        
+        <div class="admin-section">
+            <h2>📋 Все заявки пользователей</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="new">Новые</button>
+                <button class="filter-btn" data-filter="in_progress">Идет обучение</button>
+                <button class="filter-btn" data-filter="completed">Завершены</button>
+            </div>
+            <div id="allApplicationsList" class="applications-list admin-list"></div>
+        </div>
+        
+        <div class="admin-section">
+            <h2>💬 Отзывы пользователей</h2>
+            <div id="allReviewsList" class="reviews-list"></div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно изменения статуса -->
+    <div id="statusModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Изменение статуса заявки</h3>
+            <form id="statusForm">
+                <input type="hidden" id="statusAppId">
+                <div class="form-group">
+                    <label>Новый статус</label>
+                    <select id="newStatus" required>
+                        <option value="new">Новая</option>
+                        <option value="in_progress">Идет обучение</option>
+                        <option value="completed">Обучение завершено</option>
+                        <option value="rejected">Отклонена</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Комментарий администратора</label>
+                    <textarea id="adminComment" rows="3" placeholder="Добавьте комментарий..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

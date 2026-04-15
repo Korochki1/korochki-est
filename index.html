@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корочки.есть - Онлайн курсы ДПО</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 Корочки.есть</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Главная</a>
+                <a href="request.html">Новая заявка</a>
+                <a href="profile.html">Мои заявки</a>
+                <span id="userName"></span>
+                <a href="#" id="logoutBtn" style="display:none;">Выйти</a>
+                <a href="login.html" id="loginLink">Войти</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>📚 Корочки.есть</h1>
+            <p>Портал дополнительного профессионального образования</p>
+            <p>Получите новые знания и официальное удостоверение о повышении квалификации</p>
+            <div class="hero-buttons">
+                <a href="register.html" class="btn btn-primary">Начать обучение</a>
+                <a href="request.html" class="btn btn-secondary">Подать заявку</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">🎓</div>
+            <h3>Официальные документы</h3>
+            <p>По окончании выдается удостоверение установленного образца</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">💻</div>
+            <h3>Онлайн-формат</h3>
+            <p>Учитесь из любой точки мира в удобное время</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">👨‍🏫</div>
+            <h3>Опытные преподаватели</h3>
+            <p>Практикующие эксперты из ведущих компаний</p>
+        </div>
+    </div>
+    
+    <div class="courses-section">
+        <h2>Популярные курсы</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3>Python для начинающих</h3>
+                <p>Основы программирования на Python, работа с данными, создание приложений</p>
+                <span class="duration">3 месяца</span>
+                <span class="price">15 000 ₽</span>
+            </div>
+            <div class="course-card">
+                <h3>Веб-разработка Full Stack</h3>
+                <p>HTML, CSS, JavaScript, React, Node.js, создание современных сайтов</p>
+                <span class="duration">6 месяцев</span>
+                <span class="price">35 000 ₽</span>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Анализ данных, машинное обучение, визуализация, Pandas, NumPy</p>
+                <span class="duration">4 месяца</span>
+                <span class="price">25 000 ₽</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>
